@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { BookIcon } from './Icons';
 import './Header.css';
 
 export default function Header() {
@@ -18,10 +17,9 @@ export default function Header() {
       <div className="header-container">
         
         <nav className="header-nav">
+          <a href="#about" className="header-link">理念</a>
           <a href="#features" className="header-link">功能</a>
           <a href="#flow" className="header-link">流程</a>
-          <a href="#showcase" className="header-link">展示</a>
-          <a href="#extension" className="header-link">插件</a>
         </nav>
 
       </div>

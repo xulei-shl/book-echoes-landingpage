@@ -3,18 +3,18 @@ import { CalendarIcon, MoonIcon, TagIcon, RadioIcon, BarChartIcon, SearchIcon, B
 import './About.css';
 
 const features = [
-  { id: 'month', icon: CalendarIcon, title: '月份牌', desc: '按时序索引' },
-  { id: 'sleeping', icon: MoonIcon, title: '睡美人', desc: '冷门文献追踪' },
-  { id: 'subject', icon: TagIcon, title: '主题卡', desc: '向量化知识关联' },
-  { id: 'literature', icon: RadioIcon, title: '文学 FM', desc: '随机频段推荐' },
+  { id: 'month', icon: CalendarIcon, title: '月份牌', desc: '每月归还书目推荐' },
+  { id: 'sleeping', icon: MoonIcon, title: '睡美人', desc: '每月零借阅书目推荐' },
+  { id: 'subject', icon: TagIcon, title: '主题卡', desc: '语义主题类书目推荐' },
+  { id: 'literature', icon: RadioIcon, title: '文学 FM', desc: '情境类纯文学书目推荐' },
 ];
 
 export default function About() {
   const values = [
-    { id: '001', icon: BarChartIcon, title: 'DATA ARCHIVE', desc: '基于系统级真实流通数据的采集与分析' },
-    { id: '002', icon: SearchIcon, title: 'DEEP DISCOVERY', desc: '规避从众现象，挖掘深藏底层的长尾文本' },
-    { id: '003', icon: BrainIcon, title: 'AI EVALUATION', desc: '多代理协同一阶、二阶评注反馈机制' },
-    { id: '004', icon: SparklesIcon, title: 'CHRONO SYNC', desc: '持续追踪周期性变化，维持数据鲜活' },
+    { id: '001', icon: BarChartIcon, title: 'DATA ARCHIVE', desc: '基于真实读者的借阅行为数据分析' },
+    { id: '002', icon: SearchIcon, title: 'DEEP DISCOVERY', desc: '避开热门榜单，寻找长尾精品' },
+    { id: '003', icon: BrainIcon, title: 'AI EVALUATION', desc: '大模型三阶段评选机制' },
+    { id: '004', icon: SparklesIcon, title: 'SOCIAL CARD', desc: '社交媒体卡片式可视化展陈' },
   ];
 
   return (
@@ -30,8 +30,8 @@ export default function About() {
           <div className="section-label">THEORY //</div>
           <h2 className="section-title">策展理念</h2>
           <p className="section-desc">
-            我们拒绝随波逐流的畅销书单模式。通过对基层借阅日志档案的深度分析，
-            结合 AI 策展代理，打捞那些落满灰尘却依旧闪耀的隐秘经典。
+            我们拒绝随波逐流的畅销书单模式。通过对借阅验收数据分析，
+            结合 LLM 模型评选，打捞那些“蒙尘”的隐秘经典。
           </p>
         </motion.div>
 

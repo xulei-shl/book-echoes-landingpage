@@ -22,6 +22,7 @@ const features = [
     title: '前端展示',
     desc: '精美的书目展示界面，支持按月份、主题浏览推荐图书',
     images: [
+      'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204018066.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204654842.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204759130.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204849773.png',
@@ -116,6 +117,9 @@ export default function Features() {
         >
           <div className="section-label">EXHIBITIONS //</div>
           <h2 className="section-title">核心功能</h2>
+          <p className="features-desc">
+            多种书目筛选与推荐机制，满足不同场景的阅读发现需求
+          </p>
         </motion.div>
 
         <div className="features-grid">

@@ -9,8 +9,8 @@ const flowImages = [
 
 const steps = [
   { id: '01', title: 'IMPORT', desc: '数据输入 - 归还借阅数据分析' },
-  { id: '02', title: 'FILTER', desc: '数据筛选 - 过滤热门，保留长尾' },
-  { id: '03', title: 'EVALUATE', desc: 'AI 评选 - 大模型三阶深度筛选' },
+  { id: '02', title: 'FILTER', desc: '数据过滤 - 过滤热门，保留长尾' },
+  { id: '03', title: 'EVALUATE', desc: 'LLM 评选 - 大模型三阶深度筛选' },
   { id: '04', title: 'MANIFEST', desc: '展陈生成 - 生成社交分享卡片' },
 ];
 
@@ -27,7 +27,10 @@ export default function Flow() {
           transition={{ duration: 0.8 }}
         >
           <div className="section-label">PIPELINE //</div>
-          <h2 className="section-title">数据处理流程</h2>
+          <h2 className="section-title">处理流程</h2>
+          <p className="flow-desc">
+            从原始借阅数据到精美推荐卡片的完整 pipeline
+          </p>
         </motion.div>
 
         <div className="flow-content">
