@@ -1,5 +1,11 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Flow.css';
+
+const flowImages = [
+  'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image-flow.png',
+  'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image%20(1).png'
+];
 
 const steps = [
   { id: '01', title: 'IMPORT', desc: '数据输入 - 接入流通日志档案' },
@@ -9,6 +15,7 @@ const steps = [
 ];
 
 export default function Flow() {
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
   return (
     <section className="flow" id="flow">
       <div className="container flow-container">
@@ -56,17 +63,34 @@ export default function Flow() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="image-placeholder flow-terminal">
-              <div className="terminal-header">
-                <span className="terminal-dot"></span>
-                <span className="terminal-dot"></span>
-                <span className="terminal-dot"></span>
-                <span className="terminal-title">book-echoes-pipeline.sh</span>
-              </div>
-              <div className="terminal-body flow-images">
-                <img src="https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image-flow.png" alt="Data Flow" className="flow-img" loading="lazy" />
-                <img src="https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image%20(1).png" alt="Process View" className="flow-img" loading="lazy" />
-              </div>
+            <div className="feature-image-exhibit">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeImgIndex}
+                    className="image-placeholder"
+                    initial={{ opacity: 0, scale: 0.98 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.02 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <img
+                      src={flowImages[activeImgIndex]}
+                      alt="Data Flow"
+                      className="feature-img"
+                      loading="lazy"
+                    />
+                  </motion.div>
+                </AnimatePresence>
+                <div className="feature-gallery-controls">
+                  {flowImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      className={`gallery-dot ${idx === activeImgIndex ? 'active' : ''}`}
+                      onClick={() => setActiveImgIndex(idx)}
+                      aria-label={`Show image ${idx + 1}`}
+                    />
+                  ))}
+                </div>
             </div>
           </motion.div>
         </div>
