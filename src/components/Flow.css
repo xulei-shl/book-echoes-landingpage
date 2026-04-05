@@ -1,0 +1,117 @@
+.flow {
+  padding: 96px 24px;
+}
+
+.flow-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flow-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.flow-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.00;
+  letter-spacing: -1.5px;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.flow-desc {
+  font-size: 18px;
+  color: var(--color-gray-500);
+}
+
+.flow-diagram {
+  margin-bottom: 48px;
+}
+
+.flow-steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+  position: relative;
+  padding: 24px 16px;
+  background: var(--color-white);
+  border: var(--border-whisper);
+  border-radius: 12px;
+}
+
+.flow-step-number {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-notion-blue);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+}
+
+.flow-step-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 8px;
+}
+
+.flow-step-desc {
+  font-size: 14px;
+  color: var(--color-gray-500);
+}
+
+.flow-arrow {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--color-gray-300);
+}
+
+.flow-detail {
+  margin-top: 48px;
+}
+
+.flow-image {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .flow {
+    padding: 64px 16px;
+  }
+  
+  .flow-title {
+    font-size: 32px;
+  }
+  
+  .flow-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flow-step {
+    max-width: 100%;
+  }
+  
+  .flow-arrow {
+    display: none;
+  }
+}
