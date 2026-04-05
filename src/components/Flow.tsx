@@ -8,10 +8,10 @@ const flowImages = [
 ];
 
 const steps = [
-  { id: '01', title: 'IMPORT', desc: '数据输入 - 接入流通日志档案' },
-  { id: '02', title: 'FILTER', desc: '智能筛选 - 排除噪声与显性高频词' },
-  { id: '03', title: 'EVALUATE', desc: 'AI 策展 - 三阶大模型深度评注' },
-  { id: '04', title: 'MANIFEST', desc: '展陈生成 - 输出归档索引卡片' },
+  { id: '01', title: 'IMPORT', desc: '数据输入 - 归还借阅数据分析' },
+  { id: '02', title: 'FILTER', desc: '数据筛选 - 过滤热门，保留长尾' },
+  { id: '03', title: 'EVALUATE', desc: 'AI 评选 - 大模型三阶深度筛选' },
+  { id: '04', title: 'MANIFEST', desc: '展陈生成 - 生成社交分享卡片' },
 ];
 
 export default function Flow() {
@@ -27,10 +27,7 @@ export default function Flow() {
           transition={{ duration: 0.8 }}
         >
           <div className="section-label">PIPELINE //</div>
-          <h2 className="section-title">策展流水线</h2>
-          <p className="section-desc">
-            从结构化流通日志到具备阅读引导价值的沉淀档案。
-          </p>
+          <h2 className="section-title">数据处理流程</h2>
         </motion.div>
 
         <div className="flow-content">

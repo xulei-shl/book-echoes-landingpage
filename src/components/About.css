@@ -39,7 +39,7 @@
 
 .value-title {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   color: var(--color-text-primary);
   margin-bottom: 12px;
@@ -47,7 +47,7 @@
 
 .value-desc {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
@@ -76,7 +76,7 @@
 
 .feature-mini-title {
   font-family: var(--font-sans);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--color-text-primary);
   margin-bottom: 4px;
@@ -84,7 +84,7 @@
 
 .feature-mini-desc {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--color-text-secondary);
 }
 

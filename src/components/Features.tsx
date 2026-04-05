@@ -9,7 +9,7 @@ const features = [
     icon: SettingsIcon,
     number: '01',
     title: '后台管理',
-    desc: '提供数据导入、图书管理、推荐算法配置等完整的运营管理后台。采用严格的访问控制与流水线般的编排。',
+    desc: '提供数据导入、过滤参数配置、大模型与提示词管理、流程执行等运营管理后台',
     images: [
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405211532579.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405211622032.png'
@@ -20,7 +20,7 @@ const features = [
     icon: DesktopIcon,
     number: '02',
     title: '前端展示',
-    desc: '精美的书目展示界面，支持按月份、主题浏览推荐图书，右侧固定辅助展板显示书籍详情与文献来源。',
+    desc: '精美的书目展示界面，支持按月份、主题浏览推荐图书',
     images: [
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204654842.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204759130.png',
@@ -33,7 +33,7 @@ const features = [
     icon: BotIcon,
     number: '03',
     title: 'AIBot',
-    desc: '基于大模型的智能问答系统，作为私人策展人，为读者提供不仅限于推荐的、充满个性化的咨询服务。',
+    desc: 'LLM 书目语义检索，辅助馆员主题书目推荐。支持简单、深度、文档三种模式',
     images: [
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/AIBot.png',
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/AIBot-2.png'
@@ -44,7 +44,7 @@ const features = [
     icon: PlugIcon,
     number: '04',
     title: '浏览器插件',
-    desc: '常驻浏览器的悬浮扩展程序，随时随心访问馆藏资源与推荐列表，在浩瀚网页中为您保留一处理想书房。',
+    desc: '在阅读网络文章（类似 AIBot 的文档模式）时，可检索与此文主题相近的馆藏书目',
     images: [
       'https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image.png'
     ]
@@ -115,10 +115,7 @@ export default function Features() {
           transition={{ duration: 0.8 }}
         >
           <div className="section-label">EXHIBITIONS //</div>
-          <h2 className="section-title">核心馆藏功能</h2>
-          <p className="section-desc">
-            多种展陈与发现渠道，不仅满足检索需求，更致力于在静谧中提供长效阅读指引。
-          </p>
+          <h2 className="section-title">核心功能</h2>
         </motion.div>
 
         <div className="features-grid">

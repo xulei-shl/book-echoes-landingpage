@@ -13,7 +13,7 @@
 .section-label {
   font-family: var(--font-mono);
   color: var(--color-gold);
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   margin-bottom: 24px;
   opacity: 0.8;
@@ -30,7 +30,7 @@
 
 .section-desc {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-text-secondary);
   line-height: 1.8;
 }
@@ -57,7 +57,7 @@
 
 .feature-number {
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: 0.05em;
 }
 
@@ -77,7 +77,7 @@
 
 .feature-title {
   font-family: var(--font-sans);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 500;
   color: var(--color-text-primary);
   margin-bottom: 16px;
@@ -86,7 +86,7 @@
 
 .feature-desc {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--color-text-secondary);
   margin-bottom: 40px;

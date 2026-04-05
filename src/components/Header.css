@@ -19,7 +19,7 @@
   padding: 12px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .header-brand {

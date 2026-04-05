@@ -16,15 +16,14 @@ export default function Hero() {
             书海<br /><span className="text-gold">回响</span>
           </h1>
           <p className="hero-subtitle">
-            每一本被安静归还的册子，都是一次无声的推荐。<br />
-            倾听书海的回响，在这片代码穹顶下，<br />
-            重新发掘那些被时间沉淀的智慧遗珠。
+            每一本归还的图书，都是一次无声的推荐。<br />
+            倾听书海的回响，发现那些沉淀下来的智慧遗珠。
           </p>
           <div className="hero-buttons">
-            <a href="[Demo URL]" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://be.xulei-shl.asia" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               进入展厅 / ENTER
             </a>
-            <a href="https://github.com/[GitHub URL]" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            <a href="https://github.com/xulei-shl/book-echoes-aibot" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               系统源码 / GITHUB
             </a>
           </div>

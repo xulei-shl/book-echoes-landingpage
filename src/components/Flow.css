@@ -59,19 +59,19 @@
 
 .flow-step-id {
   color: var(--color-text-secondary);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .flow-step-title {
   color: var(--color-gold);
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.1em;
 }
 
 .flow-step-desc {
   font-family: var(--font-sans);
   color: var(--color-text-primary);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -110,7 +110,7 @@
 
 .terminal-title {
   margin-left: auto;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--color-text-dim);
 }
 
