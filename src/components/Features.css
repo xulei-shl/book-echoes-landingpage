@@ -142,24 +142,33 @@
 
 .gallery-dot {
   width: 24px;
-  height: 2px;
+  height: 8px;
   background: var(--color-text-secondary);
   border: none;
   cursor: pointer;
   opacity: 0.3;
   transition: all 0.3s;
-  padding: 0;
+  padding: 10px 0;
+  margin: 0 4px;
+  position: relative;
+}
+
+.gallery-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
 }
 
 .gallery-dot:hover {
   opacity: 0.7;
-  height: 4px;
-  transform: translateY(-1px);
+  height: 10px;
 }
 
 .gallery-dot.active {
   background: var(--color-gold);
   opacity: 1;
+  height: 10px;
 }
 
 @media (max-width: 1080px) {
