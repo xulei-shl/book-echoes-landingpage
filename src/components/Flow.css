@@ -1,117 +1,155 @@
 .flow {
-  padding: 96px 24px;
-}
-
-.flow-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 120px 0;
+  background: var(--color-bg-base);
+  border-top: var(--border-glass);
 }
 
 .flow-header {
-  text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 }
 
-.flow-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.00;
-  letter-spacing: -1.5px;
-  color: var(--color-black);
-  margin-bottom: 16px;
-}
-
-.flow-desc {
-  font-size: 18px;
-  color: var(--color-gray-500);
+.flow-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: center;
 }
 
 .flow-diagram {
-  margin-bottom: 48px;
+  position: relative;
+  padding-left: 24px;
 }
 
-.flow-steps {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
+.flow-axis {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-gold-dim);
 }
 
 .flow-step {
-  flex: 1;
-  min-width: 200px;
-  max-width: 240px;
-  text-align: center;
   position: relative;
-  padding: 24px 16px;
-  background: var(--color-white);
-  border: var(--border-whisper);
-  border-radius: 12px;
+  margin-bottom: 40px;
 }
 
-.flow-step-number {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-white);
-  background: var(--color-notion-blue);
-  border-radius: 50%;
-  margin: 0 auto 16px;
+.flow-step::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-gold);
+}
+
+.flow-step:last-child {
+  margin-bottom: 0;
+}
+
+.flow-step-meta {
+  font-family: var(--font-mono);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flow-step-id {
+  color: var(--color-text-secondary);
+  font-size: 13px;
 }
 
 .flow-step-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-black);
-  margin-bottom: 8px;
+  color: var(--color-gold);
+  font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
 .flow-step-desc {
-  font-size: 14px;
-  color: var(--color-gray-500);
-}
-
-.flow-arrow {
-  position: absolute;
-  right: -24px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: var(--color-gray-300);
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .flow-detail {
-  margin-top: 48px;
+  padding: 8px;
+  border: 1px solid var(--color-gold-dim);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.flow-image {
-  max-width: 800px;
-  margin: 0 auto;
+.flow-terminal {
+  background: var(--color-bg-panel);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: none;
+  min-height: 340px;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.terminal-header {
+  height: 32px;
+  border-bottom: 1px solid var(--color-gold-dim);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-gold-muted);
+}
+
+.terminal-title {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--color-text-dim);
+}
+
+.flow-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.flow-img {
+  width: 100%;
+  border: 1px solid var(--color-gold-dim);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.flow-img:hover {
+  opacity: 1;
+  border-color: var(--color-gold);
+  transform: scale(1.02);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1080px) {
+  .flow-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
 }
 
 @media (max-width: 768px) {
   .flow {
-    padding: 64px 16px;
-  }
-  
-  .flow-title {
-    font-size: 32px;
-  }
-  
-  .flow-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .flow-step {
-    max-width: 100%;
-  }
-  
-  .flow-arrow {
-    display: none;
+    padding: 80px 0;
   }
 }

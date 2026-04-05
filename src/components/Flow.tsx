@@ -1,72 +1,75 @@
 import { motion } from 'framer-motion';
-import { RefreshIcon } from './Icons';
 import './Flow.css';
 
 const steps = [
-  { id: 1, title: '数据输入', desc: '上传借阅数据 Excel' },
-  { id: 2, title: '智能筛选', desc: '过滤热门，保留长尾' },
-  { id: 3, title: 'AI 评选', desc: '大模型三阶段评选' },
-  { id: 4, title: '卡片生成', desc: '生成社交分享卡片' },
+  { id: '01', title: 'IMPORT', desc: '数据输入 - 接入流通日志档案' },
+  { id: '02', title: 'FILTER', desc: '智能筛选 - 排除噪声与显性高频词' },
+  { id: '03', title: 'EVALUATE', desc: 'AI 策展 - 三阶大模型深度评注' },
+  { id: '04', title: 'MANIFEST', desc: '展陈生成 - 输出归档索引卡片' },
 ];
 
 export default function Flow() {
   return (
-    <section className="flow section-alt" id="flow">
-      <div className="flow-container">
-        <motion.div 
+    <section className="flow" id="flow">
+      <div className="container flow-container">
+        <motion.div
           className="flow-header"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8 }}
         >
-          <h2 className="flow-title">数据处理流程</h2>
-          <p className="flow-desc">
-            从原始借阅数据到精美推荐卡片的完整 pipeline
+          <div className="section-label">PIPELINE //</div>
+          <h2 className="section-title">策展流水线</h2>
+          <p className="section-desc">
+            从结构化流通日志到具备阅读引导价值的沉淀档案。
           </p>
         </motion.div>
 
-        <motion.div 
-          className="flow-diagram"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flow-steps">
-            {steps.map((step, index) => (
-              <div key={step.id} className="flow-step">
-                <div className="flow-step-number">{step.id}</div>
-                <h3 className="flow-step-title">{step.title}</h3>
-                <p className="flow-step-desc">{step.desc}</p>
-                {index < steps.length - 1 && (
-                  <div className="flow-arrow">→</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        <div className="flow-content">
+          <motion.div
+            className="flow-diagram"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="flow-steps">
+              {steps.map((step) => (
+                <div key={step.id} className="flow-step">
+                  <div className="flow-step-meta">
+                    <span className="flow-step-id">{step.id} </span>
+                    <span className="flow-step-title">{step.title}</span>
+                  </div>
+                  <p className="flow-step-desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
 
-        <motion.div 
-          className="flow-detail"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="flow-image">
-            <div className="image-placeholder" style={{ minHeight: '300px' }}>
-              <div>
-                <RefreshIcon size={32} />
-                <p>数据处理流程图示</p>
-                <p style={{ fontSize: '12px', marginTop: '8px', color: 'var(--color-gray-300)' }}>
-                  规格: 800x400px<br/>
-                  描述: 展示借阅→筛选→AI评选→卡片的完整流程
-                </p>
+            <div className="flow-axis"></div>
+          </motion.div>
+
+          <motion.div
+            className="flow-detail corner-accents"
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="image-placeholder flow-terminal">
+              <div className="terminal-header">
+                <span className="terminal-dot"></span>
+                <span className="terminal-dot"></span>
+                <span className="terminal-dot"></span>
+                <span className="terminal-title">book-echoes-pipeline.sh</span>
+              </div>
+              <div className="terminal-body flow-images">
+                <img src="https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image-flow.png" alt="Data Flow" className="flow-img" loading="lazy" />
+                <img src="https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/image%20(1).png" alt="Process View" className="flow-img" loading="lazy" />
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

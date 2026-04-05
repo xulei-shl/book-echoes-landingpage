@@ -1,48 +1,54 @@
 import { motion } from 'framer-motion';
-import { BookIcon } from './Icons';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-container">
-        <motion.div 
+      <div className="container hero-container">
+        <motion.div
           className="hero-content"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
         >
+          <div className="hero-meta-label">NO. 0001 / ARCHIVE //</div>
           <h1 className="hero-title">
-            书海回响
+            书海<br /><span className="text-gold">回响</span>
           </h1>
           <p className="hero-subtitle">
-            每一本归还的图书，都是一次无声的推荐<br/>
-            倾听书海的回响，发现那些沉淀下来的智慧遗珠
+            每一本被安静归还的册子，都是一次无声的推荐。<br />
+            倾听书海的回响，在这片代码穹顶下，<br />
+            重新发掘那些被时间沉淀的智慧遗珠。
           </p>
           <div className="hero-buttons">
             <a href="[Demo URL]" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              开始使用
+              进入展厅 / ENTER
             </a>
             <a href="https://github.com/[GitHub URL]" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              查看 GitHub
+              系统源码 / GITHUB
             </a>
           </div>
         </motion.div>
 
-        <motion.div 
-          className="hero-image"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <motion.div
+          className="hero-exhibit"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="image-placeholder">
-            <div>
-              <BookIcon size={48} />
-              <p>Hero 装饰插图</p>
-              <p style={{ fontSize: '12px', marginTop: '8px', color: 'var(--color-gray-300)' }}>
-                规格: 600x400px<br/>
-                建议: 书本/海浪意象插图
-              </p>
+          <div className="exhibit-frame corner-accents">
+            <div className="hero-exhibit-inner">
+              <img
+                src="https://xulei-pic-1258542021.cos.ap-shanghai.myqcloud.com/mdpic/20260405204018066.png"
+                alt="Archive Manifestation"
+                className="hero-exhibit-image"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="exhibit-tag">
+              <span className="dot pulse"></span>
+              SYSTEM ONLINE
             </div>
           </div>
         </motion.div>
